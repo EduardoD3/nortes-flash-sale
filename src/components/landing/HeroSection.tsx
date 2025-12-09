@@ -6,87 +6,106 @@ const HeroSection = () => {
   const whatsappUrl = 'https://wa.me/5511999999999?text=Olá! Vi as ofertas especiais e gostaria de saber mais.';
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-hero">
-      {/* Background Image with Overlay */}
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Background Image with refined overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="Interior decorado com peças da Nortês Interiores"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 flex min-h-screen flex-col justify-center py-20">
-        {/* Logo */}
-        <div className="mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
-          <h2 className="font-display text-2xl font-semibold tracking-wide text-primary">
-            NORTÊS INTERIORES
-          </h2>
-        </div>
-
-        {/* Urgency Badge */}
-        <div className="mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-          <span className="inline-flex items-center gap-2 rounded-full bg-destructive/10 px-4 py-2 text-sm font-medium text-destructive">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-destructive" />
-            Ofertas válidas por tempo limitado
-          </span>
-        </div>
-
-        {/* Headline */}
-        <h1 className="mb-6 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-foreground opacity-0 animate-fade-in-up md:text-5xl lg:text-6xl" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
-          Super Ofertas Nortês Interiores
-          <span className="block text-primary">Peças de Decoração com Estoque Limitado</span>
-        </h1>
-
-        {/* Subheadline */}
-        <p className="mb-8 max-w-2xl text-lg text-muted-foreground opacity-0 animate-fade-in-up md:text-xl" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-          Seleção especial de quadros, esculturas, almofadas e objetos de decoração 
-          com <strong className="text-foreground">descontos exclusivos</strong> por tempo limitado.
-        </p>
-
-        {/* CTAs */}
-        <div className="mb-12 flex flex-col gap-4 opacity-0 animate-fade-in-up sm:flex-row" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
-          <Button variant="hero" size="xl" asChild>
-            <a href="#ofertas">Ver Ofertas Exclusivas</a>
-          </Button>
-          <Button variant="whatsapp" size="xl" asChild>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="h-5 w-5" />
-              Falar com um especialista
-            </a>
-          </Button>
-        </div>
-
-        {/* Trust Badges */}
-        <div className="flex flex-wrap gap-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Truck className="h-5 w-5 text-secondary" />
-            <span>Frete grátis acima de R$ 299</span>
+      <div className="container relative z-10 flex min-h-screen flex-col justify-center py-24 lg:py-32">
+        <div className="max-w-2xl lg:max-w-3xl">
+          {/* Logo */}
+          <div className="mb-10 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
+            <span className="font-display text-xl font-semibold tracking-[0.15em] text-primary uppercase">
+              Nortês Interiores
+            </span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Percent className="h-5 w-5 text-secondary" />
-            <span>5% desconto no PIX</span>
+
+          {/* Urgency Badge */}
+          <div className="mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+            <span className="inline-flex items-center gap-2.5 rounded-full bg-destructive/8 px-4 py-2 text-sm font-medium text-destructive border border-destructive/15">
+              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-destructive" />
+              Ofertas válidas por tempo limitado
+            </span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <CreditCard className="h-5 w-5 text-secondary" />
-            <span>Até 12x sem juros</span>
+
+          {/* Headline */}
+          <h1 
+            className="mb-8 font-display text-4xl font-semibold leading-[1.15] text-foreground opacity-0 animate-fade-in-up sm:text-5xl md:text-6xl lg:text-7xl" 
+            style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}
+          >
+            Super Ofertas{' '}
+            <span className="text-primary">Exclusivas</span>
+            <span className="block mt-2 text-[0.7em] font-normal text-muted-foreground font-sans">
+              Peças de decoração com estoque limitado
+            </span>
+          </h1>
+
+          {/* Subheadline */}
+          <p 
+            className="mb-10 max-w-xl text-lg leading-relaxed text-muted-foreground opacity-0 animate-fade-in-up md:text-xl" 
+            style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
+          >
+            Seleção especial de quadros, esculturas, almofadas e objetos de decoração 
+            com <span className="text-foreground font-medium">descontos exclusivos</span> por tempo limitado.
+          </p>
+
+          {/* CTAs */}
+          <div 
+            className="mb-14 flex flex-col gap-4 opacity-0 animate-fade-in-up sm:flex-row" 
+            style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}
+          >
+            <Button variant="hero" size="xl" asChild>
+              <a href="#ofertas">Ver Ofertas Exclusivas</a>
+            </Button>
+            <Button variant="whatsapp" size="xl" asChild>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-5 w-5" />
+                Falar com especialista
+              </a>
+            </Button>
           </div>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Package className="h-5 w-5 text-secondary" />
-            <span>Embalagem premium</span>
+
+          {/* Trust Badges */}
+          <div 
+            className="flex flex-wrap gap-x-8 gap-y-4 opacity-0 animate-fade-in-up" 
+            style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}
+          >
+            {[
+              { icon: Truck, text: 'Frete grátis acima de R$ 299' },
+              { icon: Percent, text: '5% desconto no PIX' },
+              { icon: CreditCard, text: 'Até 12x sem juros' },
+              { icon: Package, text: 'Embalagem premium' },
+            ].map((item) => (
+              <div key={item.text} className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                <item.icon className="h-4 w-4 text-primary/70" />
+                <span>{item.text}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in animate-bounce-subtle" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
-        <a href="#ofertas" className="flex flex-col items-center gap-2 text-muted-foreground transition-colors hover:text-foreground">
-          <span className="text-xs uppercase tracking-wider">Ver ofertas</span>
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+      <div 
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in" 
+        style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}
+      >
+        <a 
+          href="#ofertas" 
+          className="group flex flex-col items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+        >
+          <span className="text-xs uppercase tracking-[0.2em] font-medium">Ver ofertas</span>
+          <div className="h-10 w-6 rounded-full border-2 border-current opacity-50 flex items-start justify-center pt-2 group-hover:opacity-100 transition-opacity">
+            <div className="h-1.5 w-1 rounded-full bg-current animate-float" />
+          </div>
         </a>
       </div>
     </section>

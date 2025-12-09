@@ -4,7 +4,7 @@ const benefits = [
   {
     icon: Truck,
     title: 'Frete Grátis',
-    description: 'Acima de R$ 299,00 para todo o Brasil',
+    description: 'Acima de R$ 299 para todo o Brasil',
   },
   {
     icon: Percent,
@@ -19,25 +19,28 @@ const benefits = [
   {
     icon: Heart,
     title: 'Curadoria Exclusiva',
-    description: 'Peças selecionadas a dedo para você',
+    description: 'Peças selecionadas a dedo',
   },
   {
     icon: MessageCircle,
     title: 'Atendimento Humano',
-    description: 'Suporte personalizado via WhatsApp',
+    description: 'Suporte via WhatsApp',
   },
 ];
 
 const BenefitsSection = () => {
   return (
-    <section className="bg-background py-20">
+    <section className="bg-background py-24 lg:py-32">
       <div className="container">
         {/* Section Header */}
-        <div className="mb-12 text-center">
-          <h2 className="mb-4 font-display text-3xl font-bold text-foreground md:text-4xl">
-            Por que comprar na Nortês?
+        <div className="mb-16 text-center">
+          <span className="mb-5 inline-block text-sm font-medium tracking-[0.2em] uppercase text-primary">
+            Vantagens
+          </span>
+          <h2 className="mb-5 font-display text-3xl font-semibold text-foreground sm:text-4xl">
+            Por que escolher a Nortês?
           </h2>
-          <p className="mx-auto max-w-2xl text-muted-foreground">
+          <p className="mx-auto max-w-lg text-muted-foreground">
             Decoração de qualidade com atendimento que você merece.
           </p>
         </div>
@@ -50,13 +53,13 @@ const BenefitsSection = () => {
               className="group flex flex-col items-center text-center opacity-0 animate-fade-in-up"
               style={{ animationDelay: `${0.1 * index}s`, animationFillMode: 'forwards' }}
             >
-              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-all duration-300 group-hover:bg-primary group-hover:scale-110">
-                <benefit.icon className="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />
+              <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-muted border border-border transition-all duration-300 group-hover:bg-primary group-hover:border-primary group-hover:shadow-card">
+                <benefit.icon className="h-6 w-6 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />
               </div>
               <h3 className="mb-2 font-display text-lg font-semibold text-foreground">
                 {benefit.title}
               </h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {benefit.description}
               </p>
             </div>
