@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { OfferFilter } from '@/types/product';
-import { mockProducts, getFilteredProducts } from '@/data/products';
+import { getFilteredProducts } from '@/data/products';
 import ProductCard from './ProductCard';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Clock, Package, Star } from 'lucide-react';
 
 const filterOptions: { value: OfferFilter; label: string; icon: React.ReactNode }[] = [
-  { value: 'all', label: 'Todas as Ofertas', icon: <Sparkles className="h-4 w-4" /> },
-  { value: 'weekly', label: 'Ofertas da Semana', icon: <Clock className="h-4 w-4" /> },
+  { value: 'all', label: 'Todas', icon: <Sparkles className="h-4 w-4" /> },
+  { value: 'weekly', label: 'Da Semana', icon: <Clock className="h-4 w-4" /> },
   { value: 'limited', label: 'Últimas Unidades', icon: <Package className="h-4 w-4" /> },
   { value: 'collection', label: 'Coleção Especial', icon: <Star className="h-4 w-4" /> },
 ];
@@ -17,34 +17,35 @@ const OffersGrid = () => {
   const filteredProducts = getFilteredProducts(activeFilter);
 
   return (
-    <section id="ofertas" className="bg-muted/30 py-20">
+    <section id="ofertas" className="bg-section-alt py-24 lg:py-32">
       <div className="container">
         {/* Section Header */}
-        <div className="mb-12 text-center">
-          <span className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1 text-sm font-medium text-primary">
+        <div className="mb-16 text-center">
+          <span className="mb-5 inline-block text-sm font-medium tracking-[0.2em] uppercase text-primary">
             Promoções Exclusivas
           </span>
-          <h2 className="mb-4 font-display text-3xl font-bold text-foreground md:text-4xl">
+          <h2 className="mb-5 font-display text-3xl font-semibold text-foreground sm:text-4xl md:text-5xl">
             Super Ofertas Selecionadas
           </h2>
-          <p className="mx-auto max-w-2xl text-muted-foreground">
+          <p className="mx-auto max-w-xl text-muted-foreground leading-relaxed">
             Peças únicas para transformar seu ambiente com até 40% de desconto. 
             Estoque limitado — quando acabar, acabou.
           </p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="mb-10 flex flex-wrap justify-center gap-3">
+        <div className="mb-12 flex flex-wrap justify-center gap-2 sm:gap-3">
           {filterOptions.map((option) => (
             <Button
               key={option.value}
               variant={activeFilter === option.value ? 'cta' : 'outline'}
-              size="lg"
+              size="default"
               onClick={() => setActiveFilter(option.value)}
               className="gap-2"
             >
               {option.icon}
-              {option.label}
+              <span className="hidden sm:inline">{option.label}</span>
+              <span className="sm:hidden">{option.label.split(' ')[0]}</span>
             </Button>
           ))}
         </div>
@@ -55,7 +56,7 @@ const OffersGrid = () => {
             <div 
               key={product.id} 
               className="opacity-0 animate-fade-in-up"
-              style={{ animationDelay: `${0.1 * index}s`, animationFillMode: 'forwards' }}
+              style={{ animationDelay: `${0.08 * index}s`, animationFillMode: 'forwards' }}
             >
               <ProductCard product={product} />
             </div>
@@ -64,13 +65,12 @@ const OffersGrid = () => {
 
         {/* Empty State */}
         {filteredProducts.length === 0 && (
-          <div className="py-16 text-center">
-            <p className="text-lg text-muted-foreground">
+          <div className="py-20 text-center">
+            <p className="text-lg text-muted-foreground mb-4">
               Nenhum produto encontrado nesta categoria no momento.
             </p>
             <Button
               variant="outline"
-              className="mt-4"
               onClick={() => setActiveFilter('all')}
             >
               Ver todas as ofertas
