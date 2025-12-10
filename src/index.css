@@ -6,90 +6,90 @@
 /* Nortês Interiores Design System - Premium Decoration Theme */
 @layer base {
   :root {
-    /* Core palette - Refined warm neutrals */
-    --background: 40 25% 97%;
-    --foreground: 25 15% 15%;
+    /* Core palette - Warm, elegant neutrals with better contrast */
+    --background: 42 30% 96%;
+    --foreground: 20 20% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 25 15% 15%;
+    --card-foreground: 20 20% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 25 15% 15%;
+    --popover-foreground: 20 20% 12%;
 
-    /* Primary - Warm bronze/cognac */
-    --primary: 25 40% 35%;
-    --primary-foreground: 40 25% 97%;
-    --primary-light: 25 35% 50%;
-    --primary-dark: 25 45% 25%;
+    /* Primary - Rich bronze/cognac with better depth */
+    --primary: 22 45% 32%;
+    --primary-foreground: 42 40% 98%;
+    --primary-light: 22 38% 48%;
+    --primary-dark: 22 50% 22%;
 
-    /* Secondary - Sophisticated olive/sage */
-    --secondary: 90 15% 40%;
-    --secondary-foreground: 40 25% 97%;
+    /* Secondary - Warm taupe */
+    --secondary: 35 18% 52%;
+    --secondary-foreground: 42 40% 98%;
 
-    /* Accent - Warm champagne gold */
-    --accent: 38 45% 60%;
-    --accent-foreground: 25 15% 15%;
+    /* Accent - Elegant gold */
+    --accent: 40 55% 52%;
+    --accent-foreground: 20 20% 12%;
 
-    /* Muted - Soft warm gray */
-    --muted: 30 10% 93%;
-    --muted-foreground: 25 10% 45%;
+    /* Muted - Warm beige with good readability */
+    --muted: 38 20% 92%;
+    --muted-foreground: 20 12% 38%;
 
-    /* Destructive - Elegant coral */
-    --destructive: 5 55% 50%;
-    --destructive-foreground: 40 25% 97%;
+    /* Destructive - Warm terracotta */
+    --destructive: 12 60% 48%;
+    --destructive-foreground: 42 40% 98%;
 
-    --border: 30 15% 90%;
-    --input: 30 15% 90%;
-    --ring: 25 40% 35%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 22 45% 32%;
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --beige: 35 25% 94%;
-    --cream: 45 35% 97%;
-    --charcoal: 25 15% 18%;
-    --olive: 90 15% 40%;
-    --terracotta: 20 45% 50%;
-    --gold: 38 50% 55%;
-    --sage: 100 12% 75%;
+    /* Custom tokens - refined */
+    --beige: 38 28% 93%;
+    --cream: 45 45% 97%;
+    --charcoal: 20 18% 15%;
+    --olive: 85 18% 42%;
+    --terracotta: 18 52% 48%;
+    --gold: 40 58% 50%;
+    --sage: 95 15% 72%;
 
-    /* Refined shadows */
-    --shadow-subtle: 0 1px 2px hsl(25 15% 15% / 0.04);
-    --shadow-soft: 0 4px 12px -2px hsl(25 15% 15% / 0.06);
-    --shadow-card: 0 8px 24px -4px hsl(25 15% 15% / 0.08);
-    --shadow-elevated: 0 16px 40px -8px hsl(25 15% 15% / 0.12);
-    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.2);
+    /* Refined shadows with warmth */
+    --shadow-subtle: 0 1px 3px hsl(20 20% 12% / 0.05);
+    --shadow-soft: 0 4px 14px -3px hsl(20 20% 12% / 0.08);
+    --shadow-card: 0 10px 28px -6px hsl(20 20% 12% / 0.1);
+    --shadow-elevated: 0 20px 48px -12px hsl(20 20% 12% / 0.15);
+    --shadow-glow: 0 0 50px hsl(var(--accent) / 0.25);
 
     /* Sidebar - compatibility */
-    --sidebar-background: 40 25% 97%;
-    --sidebar-foreground: 25 10% 45%;
-    --sidebar-primary: 25 40% 35%;
-    --sidebar-primary-foreground: 40 25% 97%;
-    --sidebar-accent: 30 10% 93%;
-    --sidebar-accent-foreground: 25 15% 15%;
-    --sidebar-border: 30 15% 90%;
-    --sidebar-ring: 25 40% 35%;
+    --sidebar-background: 42 30% 96%;
+    --sidebar-foreground: 20 12% 38%;
+    --sidebar-primary: 22 45% 32%;
+    --sidebar-primary-foreground: 42 40% 98%;
+    --sidebar-accent: 38 20% 92%;
+    --sidebar-accent-foreground: 20 20% 12%;
+    --sidebar-border: 35 20% 88%;
+    --sidebar-ring: 22 45% 32%;
   }
 
   .dark {
-    --background: 25 15% 8%;
-    --foreground: 40 15% 95%;
-    --card: 25 12% 12%;
-    --card-foreground: 40 15% 95%;
-    --popover: 25 15% 8%;
-    --popover-foreground: 40 15% 95%;
-    --primary: 25 45% 55%;
-    --primary-foreground: 25 15% 8%;
-    --secondary: 90 12% 35%;
-    --secondary-foreground: 40 15% 95%;
-    --muted: 25 10% 18%;
-    --muted-foreground: 30 12% 60%;
-    --accent: 38 40% 50%;
-    --accent-foreground: 25 15% 8%;
-    --destructive: 5 50% 45%;
-    --destructive-foreground: 40 15% 95%;
-    --border: 25 10% 20%;
-    --input: 25 10% 20%;
-    --ring: 25 45% 55%;
+    --background: 20 18% 8%;
+    --foreground: 42 25% 94%;
+    --card: 20 15% 11%;
+    --card-foreground: 42 25% 94%;
+    --popover: 20 18% 8%;
+    --popover-foreground: 42 25% 94%;
+    --primary: 22 48% 58%;
+    --primary-foreground: 20 18% 8%;
+    --secondary: 35 15% 38%;
+    --secondary-foreground: 42 25% 94%;
+    --muted: 20 12% 16%;
+    --muted-foreground: 35 15% 58%;
+    --accent: 40 50% 48%;
+    --accent-foreground: 20 18% 8%;
+    --destructive: 12 55% 42%;
+    --destructive-foreground: 42 25% 94%;
+    --border: 20 12% 18%;
+    --input: 20 12% 18%;
+    --ring: 22 48% 58%;
   }
 }
 
@@ -104,11 +104,19 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.005em;
+    font-feature-settings: "ss01", "ss02", "cv01";
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight;
+    @apply font-display;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    line-height: 1.7;
+    text-wrap: pretty;
   }
 }
 
@@ -116,10 +124,12 @@
   .font-display {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 600;
+    font-feature-settings: "liga", "kern";
   }
 
   .font-sans {
     font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 400;
   }
 
   .text-gradient {
@@ -128,11 +138,15 @@
   }
 
   .bg-hero {
-    background: linear-gradient(180deg, hsl(40 25% 97%) 0%, hsl(35 20% 95%) 100%);
+    background: linear-gradient(175deg, hsl(42 35% 97%) 0%, hsl(38 28% 94%) 100%);
   }
 
   .bg-section-alt {
-    background: linear-gradient(180deg, hsl(35 20% 96%) 0%, hsl(40 25% 97%) 100%);
+    background: linear-gradient(175deg, hsl(38 25% 95%) 0%, hsl(42 30% 96%) 100%);
+  }
+
+  .bg-section-warm {
+    background: linear-gradient(175deg, hsl(35 22% 94%) 0%, hsl(40 28% 96%) 100%);
   }
 
   .shadow-subtle {
